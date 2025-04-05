@@ -14,6 +14,7 @@ import Index from "./pages";
 import About from "./pages/about";
 import Services from "./pages/services";
 import Projects from "./pages/projects";
+import ProjectDetail from "./pages/project-detail";
 import Contact from "./pages/contact";
 import LoginForm from "./pages/login";
 import SignupForm from "./pages/signup";
@@ -30,6 +31,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path='/about' element={<About />} />
             <Route path='/services' element={<Services />} />
             <Route path='/projects' element={<Projects />} />
+            <Route path='/project/:id' element={<ProjectDetail />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/login' element={<LoginForm />} />
             <Route path='/signup' element={<SignupForm />} />

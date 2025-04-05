@@ -5,7 +5,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-blue-900 dark:bg-blue-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -78,7 +78,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
+        <div className="border-t border-blue-800 dark:border-blue-900 mt-8 pt-8 text-center text-blue-200">
           <p>&copy; {currentYear} A.P. Engineering Design Co., Ltd. All rights reserved.</p>
         </div>
       </div>
