@@ -6,6 +6,9 @@ export type Schema = {
     category: string;
     images: string;
     completionDate: string;
+    challenges?: string;
+    technicalDetails?: string;
+    drawings?: string[];
   };
   services: {
     id?: number;

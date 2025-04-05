@@ -8,9 +8,16 @@ import { ArrowLeft, Calendar, Tag, FileText, Download } from "lucide-react";
 import { fine } from "@/lib/fine";
 import { Schema } from "@/lib/db-types";
 
+// Extend the Schema projects type with additional properties
+interface ExtendedProject extends Schema["projects"] {
+  challenges?: string;
+  technicalDetails?: string;
+  drawings?: string[];
+}
+
 const ProjectDetail = () => {
   const { id } = useParams();
-  const [project, setProject] = useState<Schema["projects"] | null>(null);
+  const [project, setProject] = useState<ExtendedProject | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("overview");
 
@@ -37,7 +44,7 @@ const ProjectDetail = () => {
     fetchProject();
   }, [id]);
 
-  const defaultProjects = [
+  const defaultProjects: ExtendedProject[] = [
     {
       id: 1,
       title: "Industrial Plumbing System Design",
