@@ -1,0 +1,23 @@
+CREATE TABLE projects (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  category TEXT NOT NULL,
+  images TEXT NOT NULL,
+  completionDate TEXT NOT NULL
+);
+
+CREATE TABLE services (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  icon TEXT NOT NULL
+);
+
+CREATE TABLE teamMembers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  position TEXT NOT NULL,
+  image TEXT NOT NULL,
+  bio TEXT NOT NULL
+);
